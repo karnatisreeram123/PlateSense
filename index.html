@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlateSense | Smart Food Waste Reduction</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom soft green theme configuration for Tailwind */
+        script {
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            brand: {
+                                50: '#f0fdf4',
+                                100: '#dcfce7',
+                                500: '#22c55e',
+                                600: '#16a34a',
+                                700: '#15803d',
+                                900: '#14532d',
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800 antialiased selection:bg-brand-100 selection:text-brand-900">
+
+    <!-- Navigation Header -->
+    <header class="fixed top-0 w-full bg-white/90 backdrop-blur-md border-b border-gray-100 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer">
+                    <svg class="w-8 h-8 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
+                    <span class="font-bold text-2xl tracking-tight text-gray-900">PlateSense</span>
+                </div>
+                
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-600 hover:text-brand-600 font-medium transition-colors">Home</a>
+                    <a href="#problem" class="text-gray-600 hover:text-brand-600 font-medium transition-colors">The Problem</a>
+                    <a href="#solution" class="text-gray-600 hover:text-brand-600 font-medium transition-colors">How It Works</a>
+                </nav>
+
+                <!-- CTA Button -->
+                <div class="hidden md:flex">
+                    <a href="#contact" class="bg-brand-600 hover:bg-brand-700 text-white px-6 py-2.5 rounded-full font-medium shadow-sm shadow-brand-500/30 transition-all transform hover:-translate-y-0.5">
+                        Request Pilot
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button class="text-gray-600 hover:text-gray-900 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 bg-brand-50 overflow-hidden">
+        <!-- Decorative background circle -->
+        <div class="absolute top-0 left-1/2 w-full -translate-x-1/2 -translate-y-1/2 opacity-20 pointer-events-none">
+            <div class="w-[800px] h-[800px] rounded-full bg-brand-500 blur-3xl mix-blend-multiply"></div>
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="inline-block py-1 px-3 rounded-full bg-brand-100 text-brand-700 text-sm font-semibold tracking-wide mb-6">
+                STARTUP CONCEPT
+            </span>
+            <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 tracking-tight leading-tight mb-6">
+                Predict better. <br class="hidden sm:block"/>
+                <span class="text-brand-600">Prepare smarter.</span> Waste less.
+            </h1>
+            <p class="mt-4 text-xl text-gray-600 max-w-2xl mx-auto mb-10">
+                A smart, data-driven food waste reduction system designed specifically for college canteens and hostels. Turn yesterday's evidence into tomorrow's smarter meal plan.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#contact" class="bg-brand-600 hover:bg-brand-700 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg shadow-brand-500/30 transition-all transform hover:-translate-y-1">
+                    Start a Pilot
+                </a>
+                <a href="#solution" class="bg-white hover:bg-gray-50 text-gray-800 border border-gray-200 px-8 py-4 rounded-full font-semibold text-lg shadow-sm transition-all">
+                    See How It Works
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Problem Section -->
+    <section id="problem" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-brand-600 font-semibold tracking-wide uppercase text-sm mb-3">The Challenge</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why is food being wasted?</h3>
+                <p class="text-lg text-gray-600">College canteens lack a simple, data-driven way to estimate how much food to prepare for each meal, leading to avoidable waste and increased operating costs.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Point 1 -->
+                <div class="p-8 rounded-2xl bg-gray-50 border border-gray-100 hover:border-brand-200 transition-colors">
+                    <div class="w-14 h-14 bg-red-100 text-red-600 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Over-Preparation</h4>
+                    <p class="text-gray-600 leading-relaxed">Canteens often estimate portions using habit or rough attendance, resulting in cooking significantly more food than needed.</p>
+                </div>
+
+                <!-- Point 2 -->
+                <div class="p-8 rounded-2xl bg-gray-50 border border-gray-100 hover:border-brand-200 transition-colors">
+                    <div class="w-14 h-14 bg-yellow-100 text-yellow-600 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Uncertain Demand</h4>
+                    <p class="text-gray-600 leading-relaxed">Attendance changes drastically by day, specific menu items, weather, and shifting campus schedules.</p>
+                </div>
+
+                <!-- Point 3 -->
+                <div class="p-8 rounded-2xl bg-gray-50 border border-gray-100 hover:border-brand-200 transition-colors">
+                    <div class="w-14 h-14 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Hidden Costs</h4>
+                    <p class="text-gray-600 leading-relaxed">Leftovers aren't just wasted food; they directly increase ingredient costs, waste labour hours, and inflate waste-handling expenses.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="solution" class="py-24 bg-brand-50 border-t border-brand-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-brand-600 font-semibold tracking-wide uppercase text-sm mb-3">Our Solution</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">A Practical Workflow</h3>
+                <p class="text-lg text-gray-600">Start with a simple form and dashboard. No expensive hardware is required for the pilot. We turn food-waste data into actionable prep decisions.</p>
+            </div>
+
+            <div class="relative">
+                <!-- Connection line for desktop -->
+                <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-brand-200 -translate-y-1/2 z-0"></div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative z-10">
+                    <!-- Step 1 -->
+                    <div class="bg-white rounded-2xl p-8 shadow-sm border border-brand-100 text-center flex flex-col items-center relative">
+                        <div class="w-16 h-16 bg-brand-600 text-white rounded-full flex items-center justify-center text-2xl font-bold shadow-lg shadow-brand-500/40 mb-6 absolute -top-8 border-4 border-brand-50">1</div>
+                        <h4 class="text-xl font-bold text-gray-900 mt-6 mb-3">Record</h4>
+                        <p class="text-gray-600">Track expected meal attendance, portions prepared, and measure leftovers by specific menu items after service.</p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="bg-white rounded-2xl p-8 shadow-sm border border-brand-100 text-center flex flex-col items-center relative">
+                        <div class="w-16 h-16 bg-brand-600 text-white rounded-full flex items-center justify-center text-2xl font-bold shadow-lg shadow-brand-500/40 mb-6 absolute -top-8 border-4 border-brand-50">2</div>
+                        <h4 class="text-xl font-bold text-gray-900 mt-6 mb-3">Learn</h4>
+                        <p class="text-gray-600">Our system compares baseline data to identify attendance patterns, popular dishes, and recurring sources of waste.</p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="bg-white rounded-2xl p-8 shadow-sm border border-brand-100 text-center flex flex-col items-center relative">
+                        <div class="w-16 h-16 bg-brand-600 text-white rounded-full flex items-center justify-center text-2xl font-bold shadow-lg shadow-brand-500/40 mb-6 absolute -top-8 border-4 border-brand-50">3</div>
+                        <h4 class="text-xl font-bold text-gray-900 mt-6 mb-3">Recommend</h4>
+                        <p class="text-gray-600">PlateSense suggests an exact, optimized preparation quantity for the next meal. Kitchen staff review and make the final call.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Value Prop Banner -->
+            <div class="mt-20 bg-brand-900 rounded-3xl p-10 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between shadow-2xl">
+                <div class="max-w-2xl mb-6 sm:mb-0">
+                    <h4 class="text-2xl font-bold text-white mb-2">Ready to test the idea in your canteen?</h4>
+                    <p class="text-brand-100">Let's pilot PlateSense for 2-4 weeks, measure the baseline vs. the pilot, and review the cost savings together.</p>
+                </div>
+                <a id="contact" href="mailto:contact@platesense.co" class="bg-white text-brand-900 px-8 py-3.5 rounded-full font-bold shadow-sm hover:bg-brand-50 transition-colors whitespace-nowrap">
+                    Join the Pilot Program
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center border-b border-gray-800 pb-8 mb-8 gap-6 text-center md:text-left">
+                <div>
+                    <div class="flex items-center justify-center md:justify-start gap-2 mb-4">
+                        <svg class="w-6 h-6 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
+                        <span class="font-bold text-xl tracking-tight text-white">PlateSense</span>
+                    </div>
+                    <p class="text-gray-400 max-w-sm">Helping food-service businesses make smarter decisions while reducing avoidable food waste.</p>
+                </div>
+                
+                <div class="text-gray-400">
+                    <p class="font-medium text-white mb-2">Entrepreneurship Project</p>
+                    <p>Presented by: <span class="text-brand-400 font-semibold">Karnati Sreeram</span></p>
+                </div>
+            </div>
+            
+            <div class="text-center text-sm text-gray-500">
+                <p>&copy; 2026 PlateSense. All rights reserved. A student startup concept.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
